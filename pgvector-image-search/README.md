@@ -36,20 +36,12 @@ When you start the app, it adds some data to the vector_store table. So if you a
 
 5. Test using curl.
 
-`/search` uses SpringBoot AI.
-`/searchWithVector` uses pgvector-java (https://github.com/pgvector/pgvector-java)
-
 `curl "localhost:8080/search?query=Square"`
-`curl "localhost:8080/searchWithVector?query=Square"`
 
 `curl "localhost:8080/search?query=what%20is%20square?"`
-`curl "localhost:8080/searchWithVector?query=what%20is%20square?"`
 
 `curl "localhost:8080/search?query=multiply"`
-`curl "localhost:8080/searchWithVector?query=multiply"`
 
 `curl "localhost:8080/search?query=toss%20a%20coin"`
-`curl "localhost:8080/searchWithVector?query=toss%20a%20coin"`
 
 `curl "localhost:8080/search?query=a%20random%20number"`
-`curl "localhost:8080/searchWithVector?query=a%20random%20number"`
