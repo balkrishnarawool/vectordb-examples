@@ -1,4 +1,4 @@
-package vectordb;
+package com.balarawool.vectordb;
 
 import com.pgvector.PGvector;
 import org.springframework.ai.document.Document;
@@ -33,6 +33,7 @@ public class PGVectorStarterController {
         return results.toString();
     }
 
+    // When using a vector as search parameter, make sure to use the same embedding-model that was originally used to store the data in the database.
     @GetMapping("/searchWithVector")
     public String searchWithVector(@RequestParam Map<String, String> params) {
         var ollamaApi = new OllamaApi();

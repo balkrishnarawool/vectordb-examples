@@ -7,10 +7,10 @@
 
 `docker exec -it ollama ollama run llama2`
 
-2. Clone this repo and go to pgvector-with-starter directory.
+2. Clone this repo and go to pgvector-text-search directory.
 3. Run pgvector with Docker using docker compose.
    
-From pgvector-with-starter directory, run
+From pgvector-text-search directory, run
 
 `docker compose up`
 
@@ -28,7 +28,7 @@ Then `Register` a new `Server` with these details:
 
 Then navigate to Local -> Databases -> vector_store -> Schemas -> public -> Tables -> vectore_store
 
-4. From pgvector-with-starter directory, run this spring-boot app. (Make sure you have JDK21.)
+4. From pgvector-text-search directory, run this spring-boot app. (Make sure you have JDK21.)
 
 `mvn spring-boot:run`
 
@@ -39,17 +39,17 @@ When you start the app, it adds some data to the vector_store table. So if you a
 `/search` uses SpringBoot AI.
 `/searchWithVector` uses pgvector-java (https://github.com/pgvector/pgvector-java)
 
-`curl "localhost:8080/search?query=Square"`
-`curl "localhost:8080/searchWithVector?query=Square"`
+`curl "localhost:8000/search?query=Square"`
+`curl "localhost:8000/searchWithVector?query=Square"`
 
-`curl "localhost:8080/search?query=what%20is%20square?"`
-`curl "localhost:8080/searchWithVector?query=what%20is%20square?"`
+`curl "localhost:8000/search?query=what%20is%20square?"`
+`curl "localhost:8000/searchWithVector?query=what%20is%20square?"`
 
-`curl "localhost:8080/search?query=multiply"`
-`curl "localhost:8080/searchWithVector?query=multiply"`
+`curl "localhost:8000/search?query=multiply"`
+`curl "localhost:8000/searchWithVector?query=multiply"`
 
-`curl "localhost:8080/search?query=toss%20a%20coin"`
-`curl "localhost:8080/searchWithVector?query=toss%20a%20coin"`
+`curl "localhost:8000/search?query=toss%20a%20coin"`
+`curl "localhost:8000/searchWithVector?query=toss%20a%20coin"`
 
-`curl "localhost:8080/search?query=a%20random%20number"`
-`curl "localhost:8080/searchWithVector?query=a%20random%20number"`
+`curl "localhost:8000/search?query=a%20random%20number"`
+`curl "localhost:8000/searchWithVector?query=a%20random%20number"`

@@ -1,4 +1,4 @@
-package vectordb;
+package com.balarawool.vectordb;
 
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -17,7 +17,7 @@ public class PGVectorStarterApplication {
         SpringApplication.run(PGVectorStarterApplication.class, args);
     }
 
-//    @Bean
+    @Bean
     ApplicationRunner applicationRunner(VectorStore vectorStore) {
 
         return args -> {
