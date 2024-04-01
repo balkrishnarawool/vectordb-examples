@@ -30,3 +30,6 @@ src/test/**/build/
 
 ### Mac OS ###
 **/.DS_Store
+
+### Ignore the image files
+/weaviate-image-search/src/main/resources/data/

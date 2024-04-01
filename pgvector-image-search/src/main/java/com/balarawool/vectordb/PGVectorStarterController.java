@@ -1,4 +1,4 @@
-package vectordb;
+package com.balarawool.vectordb;
 
 import com.pgvector.PGvector;
 import org.springframework.ai.document.Document;

@@ -1,4 +1,4 @@
-package vectordb;
+package com.balarawool.vectordb;
 
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
