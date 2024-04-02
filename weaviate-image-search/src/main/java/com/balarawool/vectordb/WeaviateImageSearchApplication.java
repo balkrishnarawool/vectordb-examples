@@ -52,13 +52,14 @@ public class WeaviateImageSearchApplication {
                     // Store image files and their vectors
                     // Files are present in resources directory with this structure:
                     // resources
-                    //    |- donald
-                    //    |- mickey
-                    //    |- minion
-                    //    |- olaf
-                    //    |- pooh
-                    //    |- pumba
-                    // Each of these subdirectories contain 1.jpg, .png etc. files.
+                    //    └ data
+                    //       ├ donald
+                    //       ├ mickey
+                    //       ├ minion
+                    //       ├ olaf
+                    //       ├ pooh
+                    //       └ pumba
+                    // Each of these subdirectories contain .jpg, .png etc. files.
                     try {
                         var sampleDir = ResourceUtils.getFile("classpath:data");
                         for (var subDir : sampleDir.listFiles()) {
