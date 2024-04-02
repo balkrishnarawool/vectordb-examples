@@ -1,7 +1,11 @@
 # Weaviate Image Search
 This is a simple image search app. It uses an image dataset from Kaggle (consisting of disney cartoon characters) and stores them in a vector database (Weaviate) by using `img2vec` vectorizer.  
 The frontend is a simple HTML page. It allows you to select an image file and then searches similar images from the dataset.  
+
+
 ![example.png](example.png)
+
+
 
 ## Steps to follow
 
@@ -9,7 +13,9 @@ The frontend is a simple HTML page. It allows you to select an image file and th
 The easiest way to get Weaviate running locally is to use the `Configurator`.  
 For that go to: https://weaviate.io/developers/weaviate/installation/docker-compose.  
 Then scroll down to `Configurator` and select the values in the prompts that appear according to the image below:  
+
 ![cofigurator_options.png](cofigurator_options.png)  
+
 This will generate a curl command to download a docker-compose file.  
 Use that or use this command to download:
 ```
@@ -66,8 +72,10 @@ So the `resources` directory looks like this:
 mvn spring-boot:run
 ```
 When you are running it first time, it takes quite some time (few minutes to embed and store all 4155 image files).  
-5. Go to `localhost:8000/index.html` and it should show a screen like this:
+5. Go to `localhost:8000/index.html` and it should show a screen like this:  
+
 ![app_ui.png](app_ui.png)
+
 6. Click 'Choose file' and select one of the files from the `test` part of dataset. the dataset has two directories. Earlier we used `/train` directory, and now we use an image file from `/test` directory, so it is a different image from the trained images.  
 7. Then click Search and you should see similar images.
 ![example.png](example.png)
